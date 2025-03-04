@@ -26,8 +26,8 @@ spec:
         envFrom:
         - configMapRef:
             name: mysql
-#        - secretRef:
-#            name: mysql
+        - secretRef:
+            name: mysql
         volumeMounts:
           - name: config
             mountPath: /etc/mysql/conf.d
