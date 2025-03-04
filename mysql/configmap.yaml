@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: mysql
-  namespace: middleware
+  namespace: mysql
 data:
   MYSQL_USER: todouser
   MYSQL_DATABASE: todolist
