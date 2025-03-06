@@ -5,3 +5,6 @@ metadata:
   namespace: rabbitmq-system
 spec:
   replicas: 3
+  persistence:
+    storageClassName: fast
+    storage: 10Gi
