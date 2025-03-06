@@ -5,6 +5,12 @@ metadata:
   namespace: rabbitmq-system
 spec:
   replicas: 3
-  persistence:
-    storageClassName: fast
-    storage: 10Gi
+  volumeClaimTemplates:
+    - metadata:
+        name: rabbitmq-data
+      spec:
+        accessModes: ["ReadWriteOnce"]
+        resources:
+          requests:
+            storage: 10Gi
+        storageClassName: fast
