@@ -1,0 +1,14 @@
+apiVersion: rabbitmq.com/v1beta1
+kind: RabbitmqCluster
+metadata:
+  name: rabbitmqcluster-sample
+spec:
+  service:
+    type: NodePort
+    ports:
+      - name: amqp
+        port: 5672
+        nodePort: 31672  # 원하는 NodePort 지정 (30000-32767 사이)
+      - name: management
+        port: 15672
+        nodePort: 31672  # 관리 UI용 NodePort (원하는 포트로 변경 가능)
