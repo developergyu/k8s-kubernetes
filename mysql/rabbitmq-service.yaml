@@ -1,9 +1,9 @@
-apiVersion: rabbitmq.com/v1beta1
-kind: RabbitmqCluster
+apiVersion: v1
+kind: Service
 metadata:
-  name: rabbitmqcluster-sample
+  name: rabbitmqcluster
+  namespace: rabbitmq-system
 spec:
-  service:
     type: NodePort
     ports:
       - name: amqp
