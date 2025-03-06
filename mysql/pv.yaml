@@ -37,7 +37,7 @@ spec:
     - ReadWriteOnce
   volumeMode: Filesystem
   persistentVolumeReclaimPolicy: Retain
-  storageClassName: manual
+  storageClassName: fast
   hostPath:
     path: /mnt/data/rabbitmq
 
@@ -58,7 +58,7 @@ spec:
     - ReadWriteOnce
   volumeMode: Filesystem
   persistentVolumeReclaimPolicy: Retain
-  storageClassName: manual
+  storageClassName: fast
   hostPath:
     path: /mnt/data/rabbitmq
 
@@ -79,6 +79,6 @@ spec:
     - ReadWriteOnce
   volumeMode: Filesystem
   persistentVolumeReclaimPolicy: Retain
-  storageClassName: manual
+  storageClassName: fast
   hostPath:
     path: /mnt/data/rabbitmq
