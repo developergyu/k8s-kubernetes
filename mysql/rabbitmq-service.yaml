@@ -4,11 +4,11 @@ metadata:
   name: rabbitmqcluster
   namespace: rabbitmq-system
 spec:
-    ports:
-    - name: amqp
-      port: 5672
-      nodePort: 31672 
-    - name: management
-      port: 15672
-      nodePort: 31672 
-    type: NodePort
+  ports:
+  - name: amqp
+    port: 5672
+    nodePort: 31672     
+  - name: management
+    port: 15672
+    nodePort: 31672 
+  type: NodePort
