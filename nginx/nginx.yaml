@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: nginx:1.14.2
+        image: harbor.stg.nnh.internal:81/offline/nginx:latest
         ports:
         - containerPort: 80
