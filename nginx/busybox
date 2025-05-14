@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: basic-pod-deployment
+  labels:
+    app: basic-pod
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: basic-pod
+  template:
+    metadata:
+      labels:
+        app: basic-pod
+    spec:
+      containers:
+      - name: busybox
+        image: busybox
+        command: ["sleep", "3600"]
+        imagePullPolicy: IfNotPresent
