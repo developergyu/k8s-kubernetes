@@ -15,7 +15,12 @@ spec:
     spec:
       containers:
       - name: stress
-        image: progrium/stress
+        image: harbor.stg.nnh.internal:81/kubernetes/alpine:latest
+        command: ["/bin/sh", "-c"]
+        args:
+          - |
+            apk add --no-cache stress-ng && \
+            stress-ng --cpu 1 --timeout 600s
         resources:
           requests:
             cpu: "100m"
@@ -23,5 +28,3 @@ spec:
           limits:
             cpu: "200m"
             memory: "200Mi"
-        command: ["stress"]
-        args: ["--cpu", "1"]
