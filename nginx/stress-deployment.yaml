@@ -1,0 +1,27 @@
+# stress-deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: stress-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: stress-app
+  template:
+    metadata:
+      labels:
+        app: stress-app
+    spec:
+      containers:
+      - name: stress
+        image: progrium/stress
+        resources:
+          requests:
+            cpu: "100m"
+            memory: "100Mi"
+          limits:
+            cpu: "200m"
+            memory: "200Mi"
+        command: ["stress"]
+        args: ["--cpu", "1"]
