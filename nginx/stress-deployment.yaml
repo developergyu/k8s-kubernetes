@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: stress
-        image: alpine:latest
+        image: harbor.stg.nnh.internal:81/kubernetes/alpine:latest
         command: ["/bin/sh", "-c"]
         args:
           - |
