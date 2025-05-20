@@ -20,7 +20,7 @@ spec:
         args:
           - |
             apk add --no-cache stress-ng && \
-            stress-ng --cpu 1 --timeout 600s
+            stress-ng --cpu 2 --timeout 600s
         resources:
           requests:
             cpu: "100m"
