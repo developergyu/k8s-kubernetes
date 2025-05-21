@@ -18,8 +18,10 @@ spec:
         image: harbor.stg.nnh.internal:81/offline/nginx:latest
         resources:
           requests:
-            cpu: 100m
+            cpu: "50m"
+            memory: "50Mi"
           limits:
-            cpu: 200m
+            cpu: "100m"
+            memory: "100Mi"
         ports:
         - containerPort: 80
